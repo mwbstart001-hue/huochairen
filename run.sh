@@ -1,0 +1,23 @@
+#!/bin/bash
+echo "=== 火柴数问题求解器 ==="
+echo ""
+echo "使用方法1：直接运行脚本输入测试用例"
+echo "./matchstick_solver.sh"
+echo ""
+echo "使用方法2：通过管道输入测试用例"
+echo "cat test_cases.txt | ./matchstick_solver.sh"
+echo ""
+echo "使用方法3：使用Docker运行（需先启动Docker服务）"
+echo "docker build -t matchstick-solver ."
+echo "cat test_cases.txt | docker run -i --rm matchstick-solver"
+echo ""
+echo "=== 测试用例格式 ==="
+echo "第一行：测试用例数量T"
+echo "后续T行：每行两个整数n（火柴数）和m（除数）"
+echo ""
+echo "=== 开始测试 ==="
+echo "测试用例内容："
+cat test_cases.txt
+echo ""
+echo "计算结果："
+cat test_cases.txt | ./matchstick_solver.sh
